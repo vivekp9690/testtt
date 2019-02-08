@@ -1,0 +1,110 @@
+[12:01 PM, 6/27/2018]  global $HTTP_RAW_POST_DATA;
+jimport('joomla.filesystem.file');
+$uri = JURI::getInstance();
+$url= $uri->root();
+$json_content = JRequest::get('post');
+//$json_content['json_content']='{"productName":"rohit","UPCcode":"upc1we23434"}';
+
+
+
+
+$post = json_decode($json_content['json_content'], true);
+$image_path='media/com_mtree/images/listings/m/';
+$image_path1='media/com_mtree/images/listings/s/';
+if(empty($post['UPCcode']) || empty($post['productName']))
+{
+  $arr = array('success' => 0, 'message' => 'Please fill all data');
+  echo json_encode($arr);exit;
+}
+[12:01 PM, 6/27/2018]  this is php code
+
+
+
+[1:29 PM, 6/27/2018]  if(isset($post['imageCount'])){
+
+for($vp=0;$vp<$post['imageCount'];$vp++){
+
+$file = $_FILES['formData']['productImage'.$vp];
+
+
+
+ like that we are grab right now
+ productImage0, productImage1
+like that we are grab
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{"userId":"760","UPCcode":"4444444444","productName":"Test product 1","imageCount":1,"formData":{"_parts":[["file",[{"uri":"file:///Users/yadavbiren/Library/Developer/CoreSimulator/Devices/56A78476-8F13-482E-9864-DE7790193CBB/data/Containers/Data/Application/CABDECA4-BF5A-4598-8093-7689C7D6068F/Library/Caches/ExponentExperienceData/%2540verity%252FVerityOne/ImagePicker/478EB179-0CB3-4183-877A-72C1E7F843E2.jpg","name":"478EB179-0CB3-4183-877A-72C1E7F843E2.jpg","type":"image/jpg"}]]]}}
+
+{
+	"userId": "760",
+	"UPCcode": "4444444444",
+	"productName": "Test product 1",
+	"imageCount": 1,
+	"formData": {
+		"_parts": [
+			["file", [{
+				"uri": "file:///Users/yadavbiren/Library/Developer/CoreSimulator/Devices/56A78476-8F13-482E-9864-DE7790193CBB/data/Containers/Data/Application/CABDECA4-BF5A-4598-8093-7689C7D6068F/Library/Caches/ExponentExperienceData/%2540verity%252FVerityOne/ImagePicker/478EB179-0CB3-4183-877A-72C1E7F843E2.jpg",
+				"name": "478EB179-0CB3-4183-877A-72C1E7F843E2.jpg",
+				"type": "image/jpg"
+			},
+					 {
+				"uri": "file:///Users/yadavbiren/Library/Developer/CoreSimulator/Devices/56A78476-8F13-482E-9864-DE7790193CBB/data/Containers/Data/Application/CABDECA4-BF5A-4598-8093-7689C7D6068F/Library/Caches/ExponentExperienceData/%2540verity%252FVerityOne/ImagePicker/478EB179-0CB3-4183-877A-72C1E7F843E2.jpg",
+				"name": "478EB179-0CB3-4183-877A-72C1E7F843E2.jpg",
+				"type": "image/jpg"
+			}]]
+		]
+	}
+}
+
+
+
+{"userId":"760","UPCcode":"555555","productName":"Test","imageCount":2,"formData":{"_parts":[["productImage",["file:///Users/yadavbiren/Library/Developer/CoreSimulator/Devices/56A78476-8F13-482E-9864-DE7790193CBB/data/Containers/Data/Application/CABDECA4-BF5A-4598-8093-7689C7D6068F/Library/Caches/ExponentExperienceData/%2540verity%252FVerityOne/ImagePicker/096B820F-7894-4AC6-AFFA-2FCD938B32E1.jpg","file:///Users/yadavbiren/Library/Developer/CoreSimulator/Devices/56A78476-8F13-482E-9864-DE7790193CBB/data/Containers/Data/Application/CABDECA4-BF5A-4598-8093-7689C7D6068F/Library/Caches/ExponentExperienceData/%2540verity%252FVerityOne/ImagePicker/21BD8DE3-07D6-45A2-8940-B08B1F967B76.jpg"]]]}}
+
+
+
+{
+	"userId": "760",
+	"UPCcode": "555555",
+	"productName": "Test",
+	"imageCount": 2,
+	"formData": {
+		"_parts": [
+			["productImage", ["file:///Users/yadavbiren/Library/Developer/CoreSimulator/Devices/56A78476-8F13-482E-9864-DE7790193CBB/data/Containers/Data/Application/CABDECA4-BF5A-4598-8093-7689C7D6068F/Library/Caches/ExponentExperienceData/%2540verity%252FVerityOne/ImagePicker/096B820F-7894-4AC6-AFFA-2FCD938B32E1.jpg", "file:///Users/yadavbiren/Library/Developer/CoreSimulator/Devices/56A78476-8F13-482E-9864-DE7790193CBB/data/Containers/Data/Application/CABDECA4-BF5A-4598-8093-7689C7D6068F/Library/Caches/ExponentExperienceData/%2540verity%252FVerityOne/ImagePicker/21BD8DE3-07D6-45A2-8940-B08B1F967B76.jpg"]]
+		]
+	}
+}

@@ -1,0 +1,8 @@
+{"userId":"761","UPCcode":"0712345678911","productName":"Test","imageCount":1,"formData":{"_parts":[["photo",{"uri":"file:///var/mobile/Containers/Data/Application/4EE67AD0-D352-48F5-8A57-095435735BFD/Library/Caches/ExponentExperienceData/%2540verity%252FVerityOne/ImagePicker/FF44C7A0-4E19-46CE-A28D-05120832C6B3.png","name":"FF44C7A0-4E19-46CE-A28D-05120832C6B3.png","type":"image/png"}]]}}
+
+
+
+[16:33:00] Object {
+[16:33:00]   "message": "Please fill all data",
+[16:33:00]   "success": 0,
+[16:33:00] }

@@ -1,0 +1,56 @@
+{
+  "expo": {
+    "name": "VerityOne",
+    "description": "A Certified App project.",
+    "slug": "VerityOne",
+    "privacy": "public",
+    "sdkVersion": "27.0.0",
+    "platforms": ["ios", "android"],
+    "version": "2.0.4",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    // "splash": {
+    //   "image": "./assets/images/splash.png",
+    //   "resizeMode": "contain",
+    //   "backgroundColor": "#ffffff"
+    // },
+    "packagerOpts" : {
+    	"nonPersistent": true
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "bundleIdentifier":"com.certified.verityscanning",
+      "buildNumber":"10",
+      "supportsTablet": true,
+      "config": {
+        "googleSignIn": {
+          "reservedClientId" : "com.googleusercontent.apps.874376514949-k0nvr6f7p5krdeqe5epc2b2a7f864nl7"
+        }
+      }
+    },
+    "android": {
+     "googleServicesFile": "./google-services.json",
+     "package": "com.certified.verityscanningOne",
+     "versionCode":10,
+     "config": {
+        "googleSignIn": {
+          "apiKey" : "874376514949-stq3f3028d88arnpgamgfj4e8mdpec65.apps.googleusercontent.com",
+          "certificateHash":"EE5FA18E14735B96FE5D1DEACD1425E76D3CA33C"
+        }
+      },
+      "permissions": [
+        "CAMERA",
+        "READ_INTERNAL_STORAGE",
+        "WRITE_INTERNAL_STORAGE",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE"
+      ]
+   }
+
+  }
+}
